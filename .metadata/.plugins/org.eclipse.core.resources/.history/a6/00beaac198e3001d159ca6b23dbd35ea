@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<title>dashboard</title>
+</head>
+<body>
+
+           <!-- Navbar start -->
+           
+            
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Ashok It</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    
+    
+      <li class="nav-item active">
+        <a class="nav-link" href="dashboard">Home <span class="sr-only">(current)</span></a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="enquiry">Add Enquiry</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="enquires">View Enquires</a>
+      </li>
+      
+    </ul>
+       <a href="logout" class="btn btn-danger">Logout</a>
+  </div>
+</nav>
+              
+
+
+
+
+          <!-- Nav bar end -->  
+    
+        <div class="container">
+            <div class="row">
+               <div class="col-md-8 offset-md-2">
+                   <div class="my-card">
+                        
+                            <h1 class="text-center">Your Performance</h1> 
+                            <h3>Total Enquires:<p th:text="${dashboardData.totalEnquires}"></p> </h3>
+                            <h3 style="color:green;">Enrolled:<p th:text="${dashboardData.enrolledCnt}"></h3>
+                            <h3 style="color: red;">Lost:<p th:text="${dashboardData.lostCnt}"></h3>
+                                             
+                       
+                   </div>
+               </div>
+            </div>
+        </div>
+   
+</body>
+</html>

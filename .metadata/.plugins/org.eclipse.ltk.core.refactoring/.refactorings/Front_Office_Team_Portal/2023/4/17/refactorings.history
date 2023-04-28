@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;findById&apos; from expression &apos;userRepository.findById(userId)&apos;&#x0D;&#x0A;- Original project: &apos;Front_Office_Team_Portal&apos;&#x0D;&#x0A;- Variable name: &apos;findById&apos;&#x0D;&#x0A;- Destination method: &apos;com.jrtp.officeportal.service.serviceimpl.EnquiryServiceImpl.getDashboardData(...)&apos;&#x0D;&#x0A;- Variable expression: &apos;userRepository.findById(userId)&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;findById&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jrtp.officeportal.service.serviceimpl{EnquiryServiceImpl.java" name="findById" replace="true" selection="844 31" stamp="1682445213104" varType="false" version="1.0"/>
+</session>

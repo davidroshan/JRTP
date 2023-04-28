@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;createMimeMessage&apos; from expression &apos;mailSender.createMimeMessage()&apos;&#x0D;&#x0A;- Original project: &apos;Front_Office_Team_Portal&apos;&#x0D;&#x0A;- Variable name: &apos;createMimeMessage&apos;&#x0D;&#x0A;- Destination method: &apos;com.jrtp.officeportal.util.EmailUtils.sendEmail(...)&apos;&#x0D;&#x0A;- Variable expression: &apos;mailSender.createMimeMessage()&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;createMimeMessage&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jrtp.officeportal.util{EmailUtils.java" name="createMimeMessage" replace="true" selection="339 30" stamp="1681920718125" varType="false" version="1.0"/>
+</session>

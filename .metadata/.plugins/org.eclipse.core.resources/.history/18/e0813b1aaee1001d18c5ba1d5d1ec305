@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<title>AshokIT Unlock Account</title>
+</head>
+<body>
+    
+        <div class="container">
+            <div class="row">
+               <div class="col-md-8 offset-md-2">
+                   <div class="my-card">
+                        
+                          
+                       <h1 class="text-center">Please Unlock Your Account Here</h1>
+                       <div>
+                       <h2>Your Email:</h2><h2 th:text="${unlock.email}"> </h2> 
+                       </div>
+                       <form th:action="@{/unlock}" th:object="${unlock}" method="post" >
+                       
+                            
+                             
+                           <!-- email field -->
+                            <div class="form-group">
+                           <label for="userEmail"></label>
+                           <input name="email"
+                                  type="hidden" 
+                                  class="form-control" 
+                                  
+                                  id="userEmail"  
+                                  placeholder="temporary password"
+                                  required="required"
+                                  />
+                                  
+                                  
+                                  
+                           </div>
+                           
+                            
+                            
+                            
+                            <!-- name field -->
+                            <div class="form-group">
+                           <label for="userTempPwd"></label>
+                           <input name="tempPwd"
+                                  type="text" 
+                                  class="form-control" 
+                                  
+                                  id="userTempPwd"  
+                                  placeholder="temporary password"
+                                  required="required"
+                                  />
+                                  
+                                  
+                                  
+                           </div>
+                           
+                          
+                           <!-- password field -->
+                            <div class="form-group">
+                           <label for="userPassword"></label>
+                           <input name="newPwd"
+                                  type="password" 
+                                  class="form-control" 
+                                  id="userPassword" 
+                                  aria-describedby="emailHelp" 
+                                  placeholder="new password"
+                                  required="required"
+                                  />
+                           </div>
+                           
+                           
+                            <!-- password field -->
+                            <div class="form-group">
+                           <label for="userConfPassword"></label>
+                           <input name="confirmPwd"
+                                  type="password" 
+                                  class="form-control" 
+                                  id="userConfPassword" 
+                                  aria-describedby="emailHelp" 
+                                  placeholder="confirm password"
+                                  required="required"
+                                  />
+                           </div>
+                           
+                            
+                           <div class="container">
+                              <div class="text-center">
+                              <button type="submit" class="btn btn-danger">Unlock</button>
+                              </div>
+                           </div>
+                            
+                       </form>
+                       
+                       
+                       
+                   </div>
+               </div>
+            </div>
+        </div>
+   
+</body>
+</html>
