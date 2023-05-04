@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
     <typeInfo handle="=Front_Office_Team_Portal/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jrtp.officeportal.service{UserService.java[UserService" modifiers="513" timestamp="1682438847612"/>
-    <typeInfo handle="=Front_Office_Team_Portal/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jrtp.officeportal.service{EnquiryService.java[EnquiryService" modifiers="513" timestamp="1682621698304"/>
+    <typeInfo handle="=Front_Office_Team_Portal/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jrtp.officeportal.service{EnquiryService.java[EnquiryService" modifiers="513" timestamp="1682688968997"/>
+    <typeInfo handle="=Blog-application/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jrtp.blogapp.service{UserService.java[UserService" modifiers="513" timestamp="1683203764927"/>
 </typeInfoHistroy>
