@@ -1,5 +1,9 @@
 package com.jrtp.blogapp.controller;
 
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,8 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+
 import com.jrtp.blogapp.binding.LoginForm;
 import com.jrtp.blogapp.binding.SignupForm;
+
 import com.jrtp.blogapp.service.UserService;
 
 @Controller
@@ -16,6 +22,9 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	HttpSession session;
 	
 	@GetMapping("/signup")
 	public String signupPage(Model model) {
@@ -32,7 +41,7 @@ public class UserController {
 			model.addAttribute("user", form);
 			return "success";
 		}else {
-			model.addAttribute("errMsg", "Plz try again...");
+			model.addAttribute("errMsg", "Email alredy exist...");
 			model.addAttribute("user", form);
 			return "signup";
 		}
@@ -61,8 +70,12 @@ public class UserController {
 		}
 	}
 	
-	@GetMapping("/dashboard")
-	public String dashboardPage() {
-		return "dashboard";
+	@GetMapping("/logout")
+	public String logout() {
+		session.invalidate();
+		return "index";
 	}
+	
+	
+	
 }

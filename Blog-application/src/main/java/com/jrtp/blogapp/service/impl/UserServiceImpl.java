@@ -1,13 +1,17 @@
 package com.jrtp.blogapp.service.impl;
 
+
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import com.jrtp.blogapp.binding.LoginForm;
 import com.jrtp.blogapp.binding.SignupForm;
+
 import com.jrtp.blogapp.entity.User;
 import com.jrtp.blogapp.repository.UserRepository;
 import com.jrtp.blogapp.service.UserService;
@@ -24,6 +28,13 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	public boolean register(SignupForm form) {
+		
+		
+		User entity = userRepo.findByEmail(form.getEmail());
+		if(entity != null) {
+			return false;
+		}
+		
 		User user = new User();
 		BeanUtils.copyProperties(form, user);
 		User save = userRepo.save(user);
@@ -45,5 +56,8 @@ public class UserServiceImpl implements UserService {
 		}
 		return "fail";
 	}
+
+
+	
 
 }
